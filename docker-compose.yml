@@ -56,6 +56,13 @@ services:
       - .:/go/src/github.com/efkbook/blog-sample
     ports:
       - 8080:8080
+  cerebro:
+    build:
+      context: .
+      dockerfile: Dockerfile-cerebro
+    ports:
+      - 9000:9000
+
 
 volumes:
   esdata:
